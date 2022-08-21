@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class AddSubjectActivity extends AppCompatActivity {
 
-    EditText edtBatchName, edtDescription, edtDuration, edtFacultyName, edtSubjectName;
+    EditText edtBatchName;
     Button btnClick;
 
     @Override
@@ -39,6 +39,8 @@ public class AddSubjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String strbname = edtBatchName.getText().toString();
+                Intent i = new Intent(AddSubjectActivity.this,SubjectDisplayActivity.class);
+                startActivity(i);
 
 
                 loadData(strbname);

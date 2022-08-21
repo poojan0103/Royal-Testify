@@ -212,6 +212,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
+            android:id="@+id/fb"
             android:layout_weight="1"
             android:background="#188CE8"
             android:drawableLeft="@drawable/fb"
@@ -223,6 +224,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#EF4646"
+            android:id="@+id/google"
             android:drawableLeft="@drawable/google_plus"
             android:text="Google"
             android:textColor="#fff" />

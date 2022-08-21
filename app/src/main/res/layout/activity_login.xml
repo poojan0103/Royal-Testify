@@ -64,18 +64,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="12dp"
                 android:text="Login"
-                android:textColor="@color/black"
+                android:textColor="#000"
                 android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/signup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="12dp"
-                android:text="Signup"
-                android:textColor="@color/black"
-                android:textSize="30sp" />
 
             <View
                 android:layout_width="wrap_content"
@@ -137,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="SignUp" />
+                android:text="Login" />
 
         </LinearLayout>
 
@@ -150,7 +141,7 @@
         android:layout_below="@id/main_lin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Or signup with"
+        android:text="Or login with"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -168,6 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:id="@+id/fb"
             android:background="#188CE8"
             android:drawableLeft="@drawable/fb"
             android:text="Facebook"
@@ -180,6 +172,7 @@
             android:background="#EF4646"
             android:drawableLeft="@drawable/google_plus"
             android:text="Google"
+            android:id="@+id/google"
             android:textColor="#fff" />
     </LinearLayout>
 
@@ -195,16 +188,16 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_ha"
+        android:id="@+id/tv_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear1"
-        android:layout_toRightOf="@id/tv_dha"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/tv_dha"
         android:text="Signup"
-        android:textSize="20dp"
         android:textColor="#3fa2ff"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
 </RelativeLayout>

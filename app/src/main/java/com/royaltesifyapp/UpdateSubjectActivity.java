@@ -21,12 +21,13 @@ public class UpdateSubjectActivity extends AppCompatActivity {
         edtBatchName = findViewById(R.id.edt_bname);
 
         btnClick = findViewById(R.id.btn_click);
-btnClick.setText("Update Subject");
 
-Intent i = getIntent();
-int subId = i.getIntExtra("SUB_ID",0);
-String strName = i.getStringExtra("SUB_NAME");
-edtBatchName.setText(strName);
+        btnClick.setText("Update Subject");
+
+        Intent i = getIntent();
+        int subId = i.getIntExtra("SUB_ID",0);
+        String strName = i.getStringExtra("SUB_NAME");
+        edtBatchName.setText(strName);
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

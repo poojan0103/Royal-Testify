@@ -24,9 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_person"
         android:layout_marginTop="50dp"
-        android:drawableLeft="@drawable/ic_person"
+
         android:drawablePadding="10dp"
-        android:hint="Batch Name"
+        android:hint="Subject Name"
         android:imeOptions="actionNext"
         android:padding="20dp"
         android:singleLine="true"

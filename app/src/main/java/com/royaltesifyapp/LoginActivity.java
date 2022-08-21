@@ -3,6 +3,7 @@ package com.royaltesifyapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,17 +37,34 @@ public class LoginActivity extends AppCompatActivity {
     TextView tvSignup;
     ImageView imgBtn;
     EditText edtEmail, edtPassword;
-    Button btnLogin;
+    Button btnLogin,fb,google;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        tvSignup = findViewById(R.id.signup);
+        fb = findViewById(R.id.fb);
+        google = findViewById(R.id.google);
+        tvSignup = findViewById(R.id.tv_signup);
         edtEmail = findViewById(R.id.edt_email);
         edtPassword = findViewById(R.id.edt_password);
         btnLogin = findViewById(R.id.btn_click);
+
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.Facebook.com/"));
+                startActivity(i);
+
+            }
+        });
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com//"));
+                startActivity(i);
+            }
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +73,12 @@ public class LoginActivity extends AppCompatActivity {
                 String strpassword = edtPassword.getText().toString();
 
                 loginApi(stremail, strpassword);
+            }
+        });
+        tvSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this,SignupActivity.class);
             }
         });
 

@@ -3,6 +3,7 @@ package com.royaltesifyapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,7 +33,7 @@ public class SignupActivity extends AppCompatActivity {
 
     TextView tvLogin;
     EditText edtFirstName, edtLastName, edtGender, edtEmail, edtPassword;
-    Button btnClick;
+    Button btnClick,fb,google;
 
 
     @Override
@@ -44,6 +45,24 @@ public class SignupActivity extends AppCompatActivity {
         edtGender = findViewById(R.id.edt_gender);
         edtEmail = findViewById(R.id.edt_email);
         edtPassword = findViewById(R.id.edt_password);
+        fb = findViewById(R.id.fb);
+        google = findViewById(R.id.google);
+
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.Facebook.com/"));
+                startActivity(i);
+
+            }
+        });
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com//"));
+                startActivity(i);
+            }
+        });
         btnClick = findViewById(R.id.btn_click);
         tvLogin = findViewById(R.id.login);
 
