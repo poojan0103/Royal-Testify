@@ -15,6 +15,9 @@
         android:theme="@style/Theme.RoyalTesifyApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DashBoardActivityAdmin"
+            android:exported="true" />
+        <activity
             android:name=".UpdateSubjectActivity"
             android:exported="true" />
         <activity

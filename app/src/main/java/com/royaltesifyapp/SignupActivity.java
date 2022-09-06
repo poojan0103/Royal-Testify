@@ -98,6 +98,7 @@ public class SignupActivity extends AppCompatActivity {
 
                 Log.e("Login Response ===", "onResponse: " + response);
 
+
                 Intent i = new Intent(SignupActivity.this, LoginActivity.class);
                 startActivity(i);
 

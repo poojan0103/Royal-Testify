@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/pooja/AndroidStudioProjects/TestifyApp-master/app/src/main/res/drawable/bg.xml" value="0.1" />
         <entry key="..\:/Users/pooja/AndroidStudioProjects/TestifyApp-master/app/src/main/res/drawable/home.xml" value="0.1" />
+        <entry key="..\:/Users/pooja/AndroidStudioProjects/TestifyApp-master/app/src/main/res/layout/activity_dash_board.xml" value="0.25" />
+        <entry key="..\:/Users/pooja/AndroidStudioProjects/TestifyApp-master/app/src/main/res/layout/activity_dash_board_admin.xml" value="0.25" />
         <entry key="..\:/Users/pooja/AndroidStudioProjects/TestifyApp-master/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/pooja/AndroidStudioProjects/TestifyApp-master/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/pooja/AndroidStudioProjects/TestifyApp-master/app/src/main/res/layout/activity_signup.xml" value="0.2" />

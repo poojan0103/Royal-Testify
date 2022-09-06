@@ -194,7 +194,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/main_lin"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="Or signup with"
         android:textSize="20dp"
         android:textStyle="bold" />
@@ -230,6 +230,7 @@
             android:textColor="#fff" />
 
     </LinearLayout>
+
     <TextView
         android:id="@+id/tv_dha"
         android:layout_width="wrap_content"
@@ -248,7 +249,6 @@
         android:layout_below="@id/linear1"
         android:layout_toRightOf="@id/tv_dha"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:text="Login"
         android:textSize="20dp"
         android:textColor="#3fa2ff"

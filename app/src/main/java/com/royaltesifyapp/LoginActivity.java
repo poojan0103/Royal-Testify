@@ -71,14 +71,22 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String stremail = edtEmail.getText().toString();
                 String strpassword = edtPassword.getText().toString();
+                if (stremail.equals("admin@gmail.com") || strpassword.equals("admin123")){
+                    Intent i = new Intent(LoginActivity.this, DashBoardActivityAdmin.class);
+                    startActivity(i);
+                }else {
+                    loginApi(stremail, strpassword);
+                }
 
-                loginApi(stremail, strpassword);
+
             }
         });
         tvSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this,SignupActivity.class);
+                startActivity(i);
+
             }
         });
 
@@ -101,6 +109,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(String response) {
 
                 Log.e("Login Response ===", "onResponse: " + response);
+
                 Intent i = new Intent(LoginActivity.this, DashBoardActivity.class);
                 startActivity(i);
             }

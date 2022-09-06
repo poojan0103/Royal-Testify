@@ -21,7 +21,7 @@ import com.royaltesifyapp.utils.VolleySingleton;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AddSubjectActivity extends AppCompatActivity {
+public class   AddSubjectActivity extends AppCompatActivity {
 
     EditText edtBatchName;
     Button btnClick;
