@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,13 +80,60 @@ public class SignupActivity extends AppCompatActivity {
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String strFn = edtFirstName.getText().toString();
-                String strLn = edtLastName.getText().toString();
-                String strGender = edtGender.getText().toString();
-                String strEmail = edtEmail.getText().toString();
-                String strPassword = edtPassword.getText().toString();
+
+                String strFn = edtFirstName.getText().toString().trim();
+                String strLn = edtLastName.getText().toString().trim();
+                String strGender = edtGender.getText().toString().trim();
+                String strEmail = edtEmail.getText().toString().trim();
+                String strPassword = edtPassword.getText().toString().trim();
+
+                if (strFn.length()<3){
+                    edtFirstName.setError("First Name Must contain 3 charcters");
+                }
+                if(TextUtils.isEmpty(strFn)){
+                    edtFirstName.setError("Please enter First Name");
+                    edtFirstName.requestFocus();
+
+                }
+                if (strLn.length()<3){
+                    edtLastName.setError("Last Name Must contain 3 charcters");
+                }
+                if(TextUtils.isEmpty(strLn)){
+
+                    edtLastName.setError("Please enter Last Name");
+                    edtLastName.requestFocus();
+
+                }
+                if(TextUtils.isEmpty(strGender)){
+                    edtGender.setError("Please enter Gender");
+                    edtGender.requestFocus();
+
+                }
+                if(strPassword.length()<6){
+                    edtPassword.setError("Paasword must contain 6 charcters");
+                    edtPassword.requestFocus();
+                }
+                if(TextUtils.isEmpty(strPassword)){
+                    edtPassword.setError("Please enter Password");
+                    edtPassword.requestFocus();
+
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(strEmail).matches()) {
+                    edtEmail.setError("Please enter Valid email");
+                    edtEmail.requestFocus();
+                }
+
+                if (TextUtils.isEmpty(strEmail)) {
+                    edtEmail.setError("Please enter Email ID");
+                    edtEmail.requestFocus();
+                }
+
+
+
 
                 loadData(strFn, strLn, strGender, strEmail, strPassword);
+
+
 
             }
         });

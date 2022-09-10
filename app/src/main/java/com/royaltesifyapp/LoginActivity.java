@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -69,8 +71,29 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String stremail = edtEmail.getText().toString();
-                String strpassword = edtPassword.getText().toString();
+                String stremail = edtEmail.getText().toString().trim();
+                String strpassword = edtPassword.getText().toString().trim();
+
+                if(strpassword.length()<6){
+                    edtPassword.setError("Paasword must contain 6 charcters");
+                    edtPassword.requestFocus();
+                }
+                if(TextUtils.isEmpty(strpassword)){
+                    edtPassword.setError("Please enter Password");
+                    edtPassword.requestFocus();
+
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(stremail).matches()) {
+                    edtEmail.setError("Please enter Valid email");
+                    edtEmail.requestFocus();
+                }
+
+                if (TextUtils.isEmpty(stremail)) {
+                    edtEmail.setError("Please enter Email ID");
+                    edtEmail.requestFocus();
+                }
+
+
                 if (stremail.equals("admin@gmail.com") || strpassword.equals("admin123")){
                     Intent i = new Intent(LoginActivity.this, DashBoardActivityAdmin.class);
                     startActivity(i);

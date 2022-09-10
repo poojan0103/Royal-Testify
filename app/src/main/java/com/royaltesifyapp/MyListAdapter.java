@@ -66,6 +66,17 @@ public class MyListAdapter extends BaseAdapter {
 
         bname.setText(subjectModelArrayList.get(i).getName());
 
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id = subjectModelArrayList.get(i).subjectId;
+                Intent i = new Intent(context,ExamActivity.class);
+                i.putExtra("KEY_EXAMID",id);
+                context.startActivity(i);
+
+            }
+        });
+
 
         return view;
     }
