@@ -53,10 +53,11 @@ public class FacultyActivity extends AppCompatActivity {
                         String LastName = jsonObject.getString("LastName");
                         String Email = jsonObject.getString("Email");
                         FacultyModel facultyModel = new FacultyModel();
-                        facultyModel.setFirstname(FirstName);
+                        facultyModel.setId(Id);
+                        facultyModel.setFirstName(FirstName);
                         facultyModel.setLastName(LastName);
                         facultyModel.setEmail(Email);
-                        facultyModel.setId(Id);
+
                         facultyModelArrayList.add(facultyModel);
                     }
                     FacultyListAdapter facultyListAdapter = new FacultyListAdapter(FacultyActivity.this, facultyModelArrayList);

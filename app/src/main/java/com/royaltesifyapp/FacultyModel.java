@@ -1,15 +1,15 @@
 package com.royaltesifyapp;
 
 public class FacultyModel {
-    String Firstname,LastName,Email;
+    String FirstName,LastName,Email;
     int id;
 
-    public String getFirstname() {
-        return Firstname;
+    public String getFirstName() {
+        return FirstName;
     }
 
-    public void setFirstname(String firstname) {
-        Firstname = firstname;
+    public void setFirstName(String firstName) {
+        FirstName = firstName;
     }
 
     public String getLastName() {

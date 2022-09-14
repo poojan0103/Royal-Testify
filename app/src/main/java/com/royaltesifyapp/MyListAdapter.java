@@ -16,17 +16,13 @@ public class MyListAdapter extends BaseAdapter {
     ArrayList<SubjectModel> subjectModelArrayList;
 
 
-    public MyListAdapter(Context context, ArrayList<SubjectModel> LangModelArrayList,ArrayList<FacultyModel> LangModel1ArrayList){
+    public MyListAdapter(Context context, ArrayList<SubjectModel> LangModelArrayList ){
         this.context = context;
         this.subjectModelArrayList = LangModelArrayList;
 
 
 
     }
-
-    public MyListAdapter(SubjectDisplayActivity context, ArrayList<SubjectModel> subjectModelArrayList) {
-    }
-
     @Override
     public int getCount() {
         return subjectModelArrayList.size();

@@ -46,7 +46,7 @@ public class FacultyListAdapter extends BaseAdapter {
         TextView fname = view.findViewById(R.id.edt_fname);
         TextView lname = view.findViewById(R.id.edt_lname);
 
-        fname.setText(facultyModelArrayList.get(i).getFirstname());
+        fname.setText(facultyModelArrayList.get(i).getFirstName());
         lname.setText(facultyModelArrayList.get(i).getLastName());
 
 
