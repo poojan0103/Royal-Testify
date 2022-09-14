@@ -12,9 +12,9 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 public class DashBoardActivityAdmin extends AppCompatActivity {
-    ListView listView;
-    String strData[] = {"Exam", "Question", "Subject"};
-    int imgData[] = {R.drawable.exam, R.drawable.question, R.drawable.google_plus};
+    GridView gridView;
+    String strData[] = {"Exam", "Question", "Subject","Faculty"};
+    int imgData[] = {R.drawable.exam, R.drawable.question, R.drawable.google_plus,R.drawable.faculty};
 
     ArrayList<LangModel> langModelArrayList;
 
@@ -23,7 +23,7 @@ public class DashBoardActivityAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board_admin);
 
-        listView = findViewById(R.id.list_view);
+        gridView = findViewById(R.id.list_view);
         langModelArrayList = new ArrayList<LangModel>();
 
         for (int i = 0; i < strData.length; i++) {
@@ -32,8 +32,8 @@ public class DashBoardActivityAdmin extends AppCompatActivity {
         }
 
         MyBaseAdapter myBaseAdapter = new MyBaseAdapter(this, langModelArrayList);
-        listView.setAdapter(myBaseAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setAdapter(myBaseAdapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
@@ -46,6 +46,9 @@ public class DashBoardActivityAdmin extends AppCompatActivity {
                     Intent intent = new Intent(DashBoardActivityAdmin.this, SubjectDisplayActivity.class);
                     startActivity(intent);
 
+                }else if (i == 3){
+                    Intent intent = new Intent(DashBoardActivityAdmin.this,FacultyActivity.class);
+                    startActivity(intent);
                 }
 
             }

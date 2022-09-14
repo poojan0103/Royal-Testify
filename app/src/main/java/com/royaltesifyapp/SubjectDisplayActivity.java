@@ -49,51 +49,7 @@ public class SubjectDisplayActivity extends AppCompatActivity {
         loginApi();
 
 
-      /*  listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                
-                String data = LangModelArrayList.get(i).getEdtBatchName();
-                String data1 = LangModelArrayList.get(i).getEdtDescription();
-                String data2 = LangModelArrayList.get(i).getEdtDuration();
-                String data3 = LangModelArrayList.get(i).getEdtFacultyName();
-                String data4 = LangModelArrayList.get(i).getEdtSubjectName();
 
-
-                Intent intent = new Intent(HomeActivity.this,SubjectActivity.class);
-                intent.putExtra("KEY_BNAME",data);
-                intent.putExtra("KEY_DESCRIPTION",data1);
-                intent.putExtra("KEY_DURATION",data2);
-                intent.putExtra("KEY_FACULTY",data3);
-                intent.putExtra("KEY_SUBJECT",data4);
-
-                startActivity(intent);
-            }
-        });*/
-
-
-
-
-        /*
-        tv1Data = findViewById(R.id.tv1_data);
-        tv2Data = findViewById(R.id.tv2_data);
-        tv3Data = findViewById(R.id.tv3_data);
-        tv4Data = findViewById(R.id.tv4_data);
-        tv5Data = findViewById(R.id.tv5_data);
-
-        Intent i = getIntent();
-        String strBname =i.getStringExtra("KEY_BNAME");
-        String strDescription =i.getStringExtra("KEY_DESCRIPTION");
-        String strDuration =i.getStringExtra("KEY_DURATION");
-        String strfname =i.getStringExtra("KEY_FNAME");
-        String strsname =i.getStringExtra("KEY_SNAME");
-
-        tv1Data.setText(strBname);
-        tv2Data.setText(strDescription);
-        tv3Data.setText(strDuration);
-        tv4Data.setText(strfname);
-        tv5Data.setText(strsname);
-        */
     }
 
     private void loginApi() {

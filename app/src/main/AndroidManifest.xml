@@ -15,6 +15,9 @@
         android:theme="@style/Theme.RoyalTesifyApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".FacultyActivity"
+            android:exported="true" />
+        <activity
             android:name=".ExamActivity"
             android:exported="true" />
         <activity
